@@ -5,6 +5,8 @@
 
 ### Ingredients
 
+A checkbox: <input type="checkbox">
+
 - <input type="checkbox"> [ ] 150g strong white flour
 - <input type="checkbox"> [ ] 150g strong wholewheat flour
 - <input type="checkbox"> [ ] 150g natural yogurt
