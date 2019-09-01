@@ -5,35 +5,35 @@
 
 ### Ingredients
 
-- <input type="checkbox"> 150g strong white flour
-- <input type="checkbox"> 150g strong wholewheat flour
-- <input type="checkbox"> 150g natural yogurt
-- <input type="checkbox"> 150g ripe sourdough starter
-- <input type="checkbox"> 50ml water
-- <input type="checkbox"> 1 teaspoon baking powder
-- <input type="checkbox"> 1 teaspoon salt
-- <input type="checkbox"> Butter
+- [ ] 150g strong white flour
+- [ ] 150g strong wholewheat flour
+- [ ] 150g natural yogurt
+- [ ] 150g ripe sourdough starter
+- [ ] 50ml water
+- [ ] 1 teaspoon baking powder
+- [ ] 1 teaspoon salt
+- [ ] Butter
 
 ---
 ### Method
 
 Preparation:
 
-- <input type="checkbox"> Mix all ingredients except for the butter in a bowl
-- <input type="checkbox"> Cover with a cloth and rest for 2-3 hours
+- [ ] Mix all ingredients except for the butter in a bowl
+- [ ] Cover with a cloth and rest for 2-3 hours
 
 ---
 After resting:
 
-- <input type="checkbox"> Knead the dough for a few minutes
-- <input type="checkbox"> Divide into 8 pieces
-- <input type="checkbox"> Heat a heavy frying pan
-- <input type="checkbox"> Melt some butter in a bowl
+- [ ] Knead the dough for a few minutes
+- [ ] Divide into 8 pieces
+- [ ] Heat a heavy frying pan
+- [ ] Melt some butter in a bowl
 
 ---
 For each piece:
 
-- <input type="checkbox"> Roll to 5mm thickness
-- <input type="checkbox"> Brush the top side with butter
-- <input type="checkbox"> Place top side down in the pan and brush the other side
-- <input type="checkbox"> Cook for 1 minute on each side
+- [ ] Roll to 5mm thickness
+- [ ] Brush the top side with butter
+- [ ] Place top side down in the pan and brush the other side
+- [ ] Cook for 1 minute on each side
