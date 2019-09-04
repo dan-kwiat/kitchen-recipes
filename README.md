@@ -1,3 +1,3 @@
 # Kitchen Recipes
 
-- [Sourdough Naan](./sourdough-naan.md)
+- [Sourdough Naan](./pages/sourdough-naan.md)
