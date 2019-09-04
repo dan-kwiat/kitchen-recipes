@@ -1,7 +1,7 @@
-import React, {Fragment} from 'react'
+import {Fragment} from 'react'
 import {MDXProvider} from '@mdx-js/react'
 import Checkbox from '../components/checkbox'
-import Link from 'next/link'
+import Nav from '../components/nav'
 
 const mdComponents = {
   input: props => <Checkbox />,
@@ -11,7 +11,7 @@ const AppContainer = ({ children }) => {
   return (
     <Fragment>
       <div>
-        <Link href='/'><a>All Recipes</a></Link>
+        <Nav />
         {children}
       </div>
       <style jsx>{`
@@ -34,6 +34,14 @@ const AppContainer = ({ children }) => {
         p > img {
           vertical-align: middle;
           margin: 0 .2em .2em .2em;
+        }
+        a {
+          color: rgba(0,0,0,.8);
+          text-decoration: none;
+        }
+        a:hover {
+          color: rgba(0,0,0,1);
+          text-decoration: underline;
         }
       `}</style>
     </Fragment>
