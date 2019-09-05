@@ -36,6 +36,7 @@ const Nav = () => (
       ul {
         display: flex;
         justify-content: space-between;
+        align-items: center;
       }
       nav > ul {
         padding: .2em 2em;

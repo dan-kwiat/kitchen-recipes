@@ -1,7 +1,8 @@
 import {Fragment} from 'react'
 import {MDXProvider} from '@mdx-js/react'
-import Checkbox from '../components/checkbox'
+import Checkbox from '@material/react-checkbox'
 import Nav from '../components/nav'
+import '../index.scss'
 
 const mdComponents = {
   input: props => <Checkbox />,
@@ -32,11 +33,12 @@ const AppContainer = ({ children }) => {
           background: whitesmoke;
           margin: 0;
         }
-        li {
-          line-height: 1.6em;
+        li.task-list-item {
+          line-height: 40px;
           list-style: none;
+          text-align: middle;
         }
-        li > input {
+        li.task-list-item .mdc-checkbox {
           margin-left: -1.6em;
         }
         p > img {
