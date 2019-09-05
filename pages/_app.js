@@ -16,8 +16,11 @@ const AppContainer = ({ children }) => {
       </div>
       <style jsx>{`
         div {
-          padding: 2em;
+          background: white;
           max-width: 800px;
+          min-height: 100vh;
+          box-sizing: border-box;
+          padding: 2em;
           margin: 0 auto;
         }
       `}</style>
@@ -25,6 +28,8 @@ const AppContainer = ({ children }) => {
         body {
           font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
           letter-spacing: 0.02em;
+          background: whitesmoke;
+          margin: 0;
         }
         li {
           line-height: 1.6em;
