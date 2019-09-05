@@ -16,11 +16,12 @@ const AppContainer = ({ children }) => {
       </div>
       <style jsx>{`
         div {
+          position: relative;
           background: white;
           max-width: 800px;
           min-height: 100vh;
           box-sizing: border-box;
-          padding: 2em;
+          padding: 100px 2em 2em 2em;
           margin: 0 auto;
         }
       `}</style>
@@ -34,6 +35,8 @@ const AppContainer = ({ children }) => {
         li {
           line-height: 1.6em;
           list-style: none;
+        }
+        li > input {
           margin-left: -1.6em;
         }
         p > img {
