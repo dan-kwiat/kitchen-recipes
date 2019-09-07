@@ -5,7 +5,11 @@ import Nav from '../components/nav'
 import '../index.scss'
 
 const mdComponents = {
-  input: props => <Checkbox />,
+  input: props => (
+    <div className='list-checkbox-container'>
+      <Checkbox />
+    </div>
+  )
 }
 
 const AppContainer = ({ children }) => {
@@ -38,12 +42,12 @@ const AppContainer = ({ children }) => {
           list-style: none;
           text-align: middle;
         }
-        li.task-list-item .mdc-checkbox {
-          margin-left: -1.6em;
-        }
-        p > img {
-          vertical-align: middle;
-          margin: 0 .2em .2em .2em;
+        li.task-list-item .list-checkbox-container {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          margin-left: -40px;
+          margin-right: -4px; // to remove the space after inline-block element
         }
         a {
           color: rgba(0,0,0,.8);
@@ -52,6 +56,10 @@ const AppContainer = ({ children }) => {
         a:hover {
           color: rgba(0,0,0,1);
           text-decoration: underline;
+        }
+        hr {
+          border: 1px solid whitesmoke;
+          border-radius: 0px;
         }
       `}</style>
     </Fragment>

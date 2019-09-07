@@ -31,7 +31,7 @@ const Nav = () => (
         left: 0px;
         right: 0px;
         border-bottom: 1px solid whitesmoke;
-        background: #fafafa;
+        background: rgba(0,0,0,.02);
       }
       ul {
         display: flex;

@@ -19,7 +19,7 @@ const Badges = ({ quantity, time }) => {
           margin-top: .3em;
           margin-bottom: .3em;
           margin-right: 1em;
-          background: #fafafa
+          background: rgba(0,0,0,.02);
         }
         .badge img {
           vertical-align: middle;
