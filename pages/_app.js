@@ -61,6 +61,9 @@ const AppContainer = ({ children }) => {
           border: 1px solid whitesmoke;
           border-radius: 0px;
         }
+        h4 {
+          color: rgba(0,0,0,.6);
+        }
       `}</style>
     </Fragment>
   )
