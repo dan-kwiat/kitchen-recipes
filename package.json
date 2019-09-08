@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@material/react-checkbox": "^0.15.0",
+    "@material/react-menu-surface": "^0.15.0",
     "@mdx-js/loader": "^1.4.0",
     "@next/mdx": "^9.0.5",
     "@zeit/next-sass": "^1.0.1",
