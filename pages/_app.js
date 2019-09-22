@@ -51,11 +51,9 @@ const AppContainer = ({ children }) => {
         }
         a {
           color: rgba(0,0,0,.8);
-          text-decoration: none;
         }
         a:hover {
           color: rgba(0,0,0,1);
-          text-decoration: underline;
         }
         hr {
           border: 1px solid whitesmoke;
