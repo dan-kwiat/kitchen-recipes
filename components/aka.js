@@ -7,8 +7,10 @@ const Aka = ({ children, terms }) => {
   return (
     <Fragment>
       <span
-        onClick={() => setOpen(x => !x)}
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
         ref={containerElement}
+        style={{ background: open ? 'papayawhip' : 'inherit' }}
       >
         {children}
       </span>
@@ -30,15 +32,16 @@ const Aka = ({ children, terms }) => {
           text-decoration: underline;
           text-decoration-style: dotted;
           text-underline-position: under;
-          cursor: pointer;
         }
         ul {
           padding-inline-start: 0px;
           padding: 0 1em;
+          max-width: 300px;
         }
         li {
           list-style: none;
-          line-height: 1.7em;
+          line-height: 1.5em;
+          margin-bottom: .5em;
         }
       `}</style>
     </Fragment>
