@@ -2,7 +2,8 @@ import {Fragment} from 'react'
 import {MDXProvider} from '@mdx-js/react'
 import Checkbox from '@material/react-checkbox'
 import Nav from '../components/nav'
-import '../index.scss'
+import '@material/react-checkbox/dist/checkbox.css'
+import '@material/react-menu-surface/dist/menu-surface.css'
 
 const mdComponents = {
   input: props => (
