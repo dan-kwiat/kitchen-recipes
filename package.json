@@ -8,9 +8,10 @@
     "export": "next export",
     "start": "next start",
     "now-build": "next build && next export",
-    "deploy": "now --target production"
+    "deploy": "now --prod"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "@material/react-checkbox": "^0.15.0",
     "@material/react-menu-surface": "^0.15.0",
     "@mdx-js/loader": "^1.5.7",
