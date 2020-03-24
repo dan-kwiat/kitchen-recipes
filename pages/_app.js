@@ -4,6 +4,7 @@ import Checkbox from '@material/react-checkbox'
 import Nav from '../components/nav'
 import '@material/react-checkbox/dist/checkbox.css'
 import '@material/react-menu-surface/dist/menu-surface.css'
+import '../index.css'
 
 const mdComponents = {
   input: props => (
@@ -68,7 +69,7 @@ const AppContainer = ({ children }) => {
   )
 }
 
-export default ({Component, pageProps}) => (
+export default ({ Component, pageProps }) => (
   <MDXProvider components={mdComponents}>
     <AppContainer>
       <Component {...pageProps} />
