@@ -7,6 +7,7 @@ const Aka = ({ children, terms }) => {
   return (
     <Fragment>
       <span
+        className='font-semibold border-b-4 border-dotted border-gray-400'
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
         ref={containerElement}
@@ -20,30 +21,12 @@ const Aka = ({ children, terms }) => {
         onClose={() => setOpen(false)}
         anchorElement={containerElement.current}
       >
-        <ul>
+        <ul className='p-4 max-w-xs'>
           {terms.map((x, i) => (
-            <li key={i}>{x}</li>
+            <li key={i} className={i < terms.length-1 ? 'pb-2' : ''}>{x}</li>
           ))}
         </ul>
       </MenuSurface>
-      <style jsx>{`
-        span {
-          font-weight: 500;
-          text-decoration: underline;
-          text-decoration-style: dotted;
-          text-underline-position: under;
-        }
-        ul {
-          padding-inline-start: 0px;
-          padding: 0 1em;
-          max-width: 300px;
-        }
-        li {
-          list-style: none;
-          line-height: 1.5em;
-          margin-bottom: .5em;
-        }
-      `}</style>
     </Fragment>
   )
 }

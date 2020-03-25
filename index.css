@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body {
+  @apply font-sans tracking-wide bg-gray-100 m-0;
+}
+
 h1 {
   @apply text-6xl;
 }
@@ -9,3 +13,32 @@ h1 {
 h2 {
   @apply text-4xl;
 }
+
+h4 {
+  @apply text-gray-600;
+}
+
+a {
+  @apply text-teal-500;
+}
+a:hover {
+  @apply text-teal-700;
+}
+
+hr {
+  @apply border border-solid border-gray-200;
+}
+
+/*li.task-list-item {
+  line-height: 40px;
+  list-style: none;
+  text-align: middle;
+}
+
+li.task-list-item .list-checkbox-container {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: -40px;
+  margin-right: -4px;
+}*/

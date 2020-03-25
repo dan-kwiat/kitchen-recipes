@@ -1,31 +1,29 @@
+const Badge = ({ icon, alt, value, children }) => {
+  return (
+    <div className='px-3 py-2 my-1 mr-3 inline-block bg-gray-200 rounded-full'>
+      <img
+        className='inline-block align-top mr-2'
+        src={icon}
+        alt={alt}
+      />
+      {value}
+    </div>
+  )
+}
+
 const Badges = ({ quantity, time }) => {
   return (
-    <div>
-      <span className='badge'>
-        <img src="/static/icons/people.svg" alt="People Icon"/> {quantity}
-      </span>
-      <span className='badge'>
-        <img src="/static/icons/clock.svg" alt="Clock Icon"/> {time}
-      </span>
-      <style jsx>{`
-        div {
-          margin 1em 0;
-        }
-        .badge {
-          padding: .7em;
-          display: inline-block;
-          border: 1px solid #fafafa;
-          border-radius: 0.4em;
-          margin-top: .3em;
-          margin-bottom: .3em;
-          margin-right: 1em;
-          background: rgba(0,0,0,.02);
-        }
-        .badge img {
-          vertical-align: middle;
-          margin: 0 .2em .2em 0;
-        }
-      `}</style>
+    <div className='my-4'>
+      <Badge
+        icon='/static/icons/people.svg'
+        alt='People Icon'
+        value={quantity}
+      />
+      <Badge
+        icon='/static/icons/clock.svg'
+        alt='Clock Icon'
+        value={time}
+      />
     </div>
   )
 }

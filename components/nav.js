@@ -1,21 +1,21 @@
 import Link from 'next/link'
 
 const Nav = () => (
-  <nav>
-    <ul>
-      <li>
+  <nav className='fixed top-0 left-0 right-0 border-b bg-gray-300'>
+    <ul className='flex justify-between items-center p-2 md:py-4 md:px-8 lg:px-24'>
+      <li className='p-1'>
         <Link href='/'>
           <a>Home</a>
         </Link>
       </li>
-      <li>
+      <li className='p-1'>
         <a
-          className='github-link'
           href='https://github.com/dan-kwiat/kitchen-recipes'
           target='_blank'
           rel='noopener noreferrer'
         >
           <img
+            className='opacity-75 hover:opacity-100'
             src='/static/icons/github.svg'
             width={24}
             height={24}
@@ -23,36 +23,6 @@ const Nav = () => (
         </a>
       </li>
     </ul>
-
-    <style jsx>{`
-      nav {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        border-bottom: 1px solid whitesmoke;
-        background: rgba(0,0,0,.02);
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      nav > ul {
-        padding: .2em 2em;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      .github-link {
-        opacity: 0.8;
-        height: 24px;
-      }
-      .github-link:hover {
-        opacity: 1;
-      }
-    `}</style>
   </nav>
 )
 

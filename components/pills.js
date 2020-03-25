@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 
 const Pill = ({ primary, onClick, children }) => {
   const dynamicClassNames = primary ? (
-    'border-blue-500 bg-blue-500 text-white'
+    'border-teal-500 bg-teal-500 text-white'
   ) : (
-    'border-white hover:border-gray-200 text-blue-500 hover:bg-gray-200'
+    'border-white hover:border-gray-200 text-teal-500 hover:bg-gray-200'
   )
   return (
     <span
