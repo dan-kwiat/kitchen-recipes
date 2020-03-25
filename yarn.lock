@@ -5452,13 +5452,13 @@ react-error-overlay@5.1.6:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
-react-horizontal@^1.0.0-alpha.19:
-  version "1.0.0-alpha.19"
-  resolved "https://registry.yarnpkg.com/react-horizontal/-/react-horizontal-1.0.0-alpha.19.tgz#45c3db274f16f7ae5f15e816affa0957462eded9"
-  integrity sha512-bt3UB90ZwgG2WY2WkGi+01PdOpONkkt2e4i2AOmWGFhL/BBIwlaq0XLlSNyUJCJP9d+uWL141ZQgPPHtCxcbkQ==
+react-horizontal@^1.0.0-alpha.20:
+  version "1.0.0-alpha.20"
+  resolved "https://registry.yarnpkg.com/react-horizontal/-/react-horizontal-1.0.0-alpha.20.tgz#b15c05f9047c4679718ce83d93626ecbbc8d3851"
+  integrity sha512-wCXxgffWSlxhsDoF7IXQPkFu4dpDFLZFRQDMHPskRCFudqA1DUTVn6+bBiAwObzqs3nNKgZADNjjXJzyZ8xYJA==
   dependencies:
     react-spring "^8.0.27"
-    react-use-gesture "^5.2.4"
+    react-use-gesture "^7.0.5"
 
 react-is@16.8.6:
   version "16.8.6"
@@ -5478,10 +5478,10 @@ react-spring@^8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react-use-gesture@^5.2.4:
-  version "5.2.4"
-  resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-5.2.4.tgz#c84ebe0d79703fd90cb26a220812c2f430d3e40d"
-  integrity sha512-oay95IPKBTAIqsZWwPAXJVVlDCpXdg4y2kEKz8oGLSqewpmXsXC4vKlAZq/ZDwZa4djzWlK1pnSIJY2iylx4QQ==
+react-use-gesture@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-7.0.5.tgz#e260ecf03a4e537cc7d9624bc2cff54e943f505a"
+  integrity sha512-8/CYG76/fLypdlPgRqxTQ2l987uc0XBQL8ax0cnA/tbeM5jU4KoQH+FG3ya6v4pMqPN1KpJQyc1QYEbKgA0QMQ==
 
 react@^16.13.1:
   version "16.13.1"
