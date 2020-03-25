@@ -2,6 +2,7 @@ import {Fragment} from 'react'
 import {MDXProvider} from '@mdx-js/react'
 import Checkbox from '@material/react-checkbox'
 import Nav from '../components/nav'
+import 'react-horizontal/es/index.css'
 import '@material/react-checkbox/dist/checkbox.css'
 import '@material/react-menu-surface/dist/menu-surface.css'
 import '../index.css'
@@ -28,7 +29,7 @@ const AppContainer = ({ children }) => {
           max-width: 800px;
           min-height: 100vh;
           box-sizing: border-box;
-          padding: 100px 2em 2em 2em;
+          padding: 100px 1em 1em 1em;
           margin: 0 auto;
         }
       `}</style>

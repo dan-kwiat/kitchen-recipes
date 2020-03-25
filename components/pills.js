@@ -1,23 +1,37 @@
 import PropTypes from 'prop-types'
 
+const Pill = ({ primary, onClick, children }) => {
+  const dynamicClassNames = primary ? (
+    'border-blue-500 bg-blue-500 text-white'
+  ) : (
+    'border-white hover:border-gray-200 text-blue-500 hover:bg-gray-200'
+  )
+  return (
+    <span
+      className={`text-center block border rounded py-2 px-3 cursor-pointer ${dynamicClassNames}`}
+      onClick={onClick}
+      children={children}
+    />
+  )
+}
+Pill.propTypes = {
+  primary: PropTypes.bool,
+  onClick: PropTypes.func,
+}
+
 const Pills = ({ items, selected, setSelected }) => {
   return (
     <ul className="flex">
       {items.map((x, i) => {
-        const dynamicClassNames = selected === x.id ? (
-          'border-blue-500 bg-blue-500 text-white'
-        ) : (
-          'border-white hover:border-gray-200 text-blue-500 hover:bg-gray-200'
-        )
         const marginClassName = i < items.length - 1 ? 'mr-2' : ''
         return (
           <li key={x.id} className={`flex-1 ${marginClassName}`}>
-            <span
-              className={`text-center block border rounded py-2 px-3 cursor-pointer ${dynamicClassNames}`}
+            <Pill
+              primary={selected === x.id}
               onClick={() => setSelected(x.id)}
             >
               {x.label}
-            </span>
+            </Pill>
           </li>
         )
       })}

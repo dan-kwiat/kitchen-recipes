@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import HorizontalScroll from 'react-horizontal'
 import Badges from '../components/badges'
 import Pills from '../components/pills'
 import { Ingredients, Method } from '../components/chana-masala'
@@ -17,19 +18,39 @@ export default () => {
         quantity='4 servings'
         time='45m'
       />
-      <Pills
-        items={SECTIONS}
-        selected={selected}
-        setSelected={setSelected}
-      />
-      {SECTIONS.map(x => {
-        const Component = x.component
-        return (
-          <div className={selected === x.id ? null : 'hidden'}>
-            <Component />
-          </div>
-        )
-      })}
+      <div className='hidden md:block md:px-2'>
+        <Pills
+          items={SECTIONS}
+          selected={selected}
+          setSelected={setSelected}
+        />
+      </div>
+      <HorizontalScroll
+        className='w-full m-0 p-0'
+        selected={-1}
+        growthFactor={0}
+        renderButtonLeft={null}
+        renderButtonRight={null}
+        buttonScrollPercent={100}
+        snap={(x, velocity, selected) => {
+          console.log(x, velocity, Math.round((x + velocity*150)/100)*100)
+          return Math.round((x + velocity*150)/100)*100
+        }}
+        mouseDrag={false}
+        touchDrag={true}
+      >
+        {SECTIONS.map(x => {
+          const Component = x.component
+          return (
+            <div key={x.id} className={`overflow-visible w-full inline-block align-top md:block md:px-10 ${selected === x.id ? '' : 'md:hidden'}`} >
+              <div className='md:hidden text-center block py-2 px-3 text-blue-500'>
+                {x.label.toUpperCase()}
+              </div>
+              <Component />
+            </div>
+          )
+        })}
+      </HorizontalScroll>
     </div>
   )
 }

@@ -6,6 +6,7 @@ const purgecss = [
       "./pages/**/*.js",
       "./node_modules/@material/react-checkbox/dist/**/*.js",
       "./node_modules/@material/react-menu-surface/dist/**/*.js",
+      "./node_modules/react-horizontal/**/*.js",
     ],
     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
   }
