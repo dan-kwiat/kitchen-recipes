@@ -18,7 +18,7 @@ export default () => {
         quantity='4 servings'
         time='45m'
       />
-      <div className='hidden md:block md:px-2'>
+      <div className='hidden lg:block lg:px-2'>
         <Pills
           items={SECTIONS}
           selected={selected}
@@ -33,7 +33,6 @@ export default () => {
         renderButtonRight={null}
         buttonScrollPercent={100}
         snap={(x, velocity, selected) => {
-          console.log(x, velocity, Math.round((x + velocity*150)/100)*100)
           return Math.round((x + velocity*150)/100)*100
         }}
         mouseDrag={false}
@@ -42,8 +41,8 @@ export default () => {
         {SECTIONS.map(x => {
           const Component = x.component
           return (
-            <div key={x.id} className={`overflow-visible w-full inline-block align-top md:block md:px-10 ${selected === x.id ? '' : 'md:hidden'}`} >
-              <div className='md:hidden text-center block py-2 px-3 text-blue-500'>
+            <div key={x.id} className={`overflow-visible w-full inline-block align-top lg:block lg:px-10 ${selected === x.id ? '' : 'lg:hidden'}`} >
+              <div className='lg:hidden text-center block py-2 px-3 text-blue-500'>
                 {x.label.toUpperCase()}
               </div>
               <Component />
