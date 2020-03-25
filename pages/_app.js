@@ -9,7 +9,7 @@ import '../index.css'
 
 const mdComponents = {
   input: props => (
-    <div className='list-checkbox-container'>
+    <div className='inline-block leading-10'>
       <Checkbox />
     </div>
   )
@@ -17,7 +17,7 @@ const mdComponents = {
 
 const AppContainer = ({ children }) => {
   return (
-    <div className='relative bg-white max-w-screen-md min-h-screen box-border p-4 pt-16 my-0 mx-auto'>
+    <div className='relative bg-white max-w-screen-md min-h-screen box-border px-2 lg:px-4 pb-4 pt-16 my-0 mx-auto'>
       <Nav />
       {children}
     </div>

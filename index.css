@@ -42,17 +42,3 @@ hr {
   0% { opacity: 1; }
   100% { opacity: 0.5; }
 }
-
-/*li.task-list-item {
-  line-height: 40px;
-  list-style: none;
-  text-align: middle;
-}
-
-li.task-list-item .list-checkbox-container {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin-left: -40px;
-  margin-right: -4px;
-}*/

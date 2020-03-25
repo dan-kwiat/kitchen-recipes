@@ -18,7 +18,7 @@ export default () => {
         quantity='4 servings'
         time='45m'
       />
-      <div className='hidden lg:block lg:px-2'>
+      <div className='hidden lg:block'>
         <Pills
           items={SECTIONS}
           selected={selected}
@@ -53,7 +53,10 @@ export default () => {
         {SECTIONS.map(x => {
           const Component = x.component
           return (
-            <div key={x.id} className={`overflow-visible w-full inline-block align-top lg:block lg:px-10 ${selected === x.id ? '' : 'lg:hidden'}`} >
+            <div
+              key={x.id}
+              className={`overflow-visible w-full inline-block align-top lg:block whitespace-normal leading-10 ${selected === x.id ? '' : 'lg:hidden'}`}
+            >
               <div className='lg:hidden text-center block py-2 px-3'>
                 {x.label.toUpperCase()}
               </div>
