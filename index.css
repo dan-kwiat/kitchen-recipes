@@ -29,6 +29,20 @@ hr {
   @apply border border-solid border-gray-200;
 }
 
+.breathe-opacity {
+  opacity: 1;
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes glow {
+  0% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
 /*li.task-list-item {
   line-height: 40px;
   list-style: none;
