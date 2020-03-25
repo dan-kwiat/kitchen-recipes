@@ -2,7 +2,7 @@ import { useState } from 'react'
 import HorizontalScroll from 'react-horizontal'
 import Badges from '../components/badges'
 import Pills from '../components/pills'
-import { Ingredients, Method } from '../components/chana-masala'
+import { Ingredients, Method } from '../components/recipes/chana-masala'
 
 const SECTIONS = [
   { id: 'ingredients', label: 'Ingredients', component: Ingredients },
