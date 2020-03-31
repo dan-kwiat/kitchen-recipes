@@ -1,7 +1,11 @@
+/* purgecss start ignore */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+/* purgecss end ignore */
+
 @import "tailwindcss/utilities";
 
+/* purgecss start ignore */
 body {
   @apply font-sans tracking-wide bg-white m-0;
 }
@@ -60,3 +64,5 @@ hr {
     opacity: 0;
   }
 }
+
+/* purgecss end ignore */
