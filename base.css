@@ -1,0 +1,58 @@
+body {
+  @apply font-sans tracking-wide bg-white m-0;
+}
+
+h1 {
+  @apply text-6xl leading-tight;
+}
+
+h2 {
+  @apply text-4xl leading-normal;
+}
+
+h3 {
+  @apply text-3xl leading-normal;
+}
+
+h4 {
+  @apply text-gray-600;
+}
+
+a {
+  @apply text-teal-500;
+}
+a:hover {
+  @apply text-teal-400;
+}
+
+hr {
+  @apply border border-solid border-gray-200 my-4;
+}
+
+.breathe-opacity {
+  opacity: 1;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-direction: normal;
+}
+.breathe-opacity.left {
+  animation-name: slide-left;
+}
+.breathe-opacity.right {
+  animation-name: slide-right;
+}
+
+@keyframes slide-right {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-left {
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
