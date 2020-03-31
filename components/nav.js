@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const Nav = () => (
-  <nav className='fixed top-0 left-0 right-0 border-b bg-gray-700'>
+  <nav className='fixed top-0 left-0 right-0 bg-gray-700'>
     <ul className='flex justify-between items-center p-2 md:py-4 md:px-8 lg:px-24'>
       <li className='p-1'>
         <Link href='/'>
