@@ -11,19 +11,19 @@ body {
 }
 
 h1 {
-  @apply text-6xl;
+  @apply text-6xl leading-tight;
 }
 
 h2 {
-  @apply text-4xl;
+  @apply text-4xl leading-normal;
 }
 
 h3 {
-  @apply text-3xl;
+  @apply text-3xl leading-normal;
 }
 
 h4 {
-  @apply text-gray-600;
+  @apply text-gray-600 leading-normal;
 }
 
 a {
