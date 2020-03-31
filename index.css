@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 body {
-  @apply font-sans tracking-wide bg-gray-100 m-0;
+  @apply font-sans tracking-wide bg-white m-0;
 }
 
 h1 {
