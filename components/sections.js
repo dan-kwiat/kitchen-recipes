@@ -30,11 +30,11 @@ const PILL_WIDTH = 160
 
 const Sections = ({ items }) => {
   console.log('rendering sections')
-  const selectedIndex = useRef(-1)
+  const selectedIndex = useRef(0)
   const { md } = useContext(DeviceContext)
 
   const [springStyles, setSpringStyles] = useSpring(() => ({
-    translatePctPx: [0],
+    translatePctPx: [0, 0],
     indexImmediate: 0,
     leftButtonDisplay: 'none',
     rightButtonDisplay: 'block',
@@ -42,23 +42,25 @@ const Sections = ({ items }) => {
   }))
 
   // Handle left/right dragging
-  const bind = useDrag(({ swipe }) => {
-    if (!swipe[0]) {
-      return
-    }
-    const index = Math.min(
+  const bind = useDrag(({ tap, swipe, last, movement }) => {
+    if (tap) return
+    const index = swipe[0] ? Math.min(
       Math.max(
         selectedIndex.current - swipe[0],
         0
       ),
       items.length - 1
-    )
+    ) : selectedIndex.current
 
     setSpringStyles({
-      translatePctPx: [-100*index],
+      translatePctPx: [
+        -100*index, // %
+        last ? 0 : movement[0] // px
+      ],
       indexImmediate: index,
       leftButtonDisplay: index > 0 ? 'block' : 'none',
       rightButtonDisplay: index < items.length -1 ? 'block' : 'none',
+      immediate: key => !last || key === 'indexImmediate',
     })
 
     selectedIndex.current = index
@@ -70,7 +72,7 @@ const Sections = ({ items }) => {
       <animated.div
         style={{
           transform: md ? undefined : (
-            springStyles.translatePctPx.interpolate((x) => `translateX(${PILL_WIDTH*(0.01*x - 0.5)}px)`)
+            springStyles.translatePctPx.interpolate((pct, px) => `translateX(${px*PILL_WIDTH/window.innerWidth + PILL_WIDTH*(0.01*pct - 0.5)}px)`)
           ),
         }}
       >
@@ -79,7 +81,7 @@ const Sections = ({ items }) => {
           onSelect={i => {
             selectedIndex.current = i
             setSpringStyles({
-              translatePctPx: [-100*i],
+              translatePctPx: [-100*i, 0],
               indexImmediate: i,
               leftButtonDisplay: i > 0 ? 'block' : 'none',
               rightButtonDisplay: i < items.length -1 ? 'block' : 'none',
@@ -92,7 +94,7 @@ const Sections = ({ items }) => {
       <animated.div
         className='relative whitespace-no-wrap'
         style={{
-          transform: springStyles.translatePctPx.interpolate((x) => `translateX(${x}%)`)
+          transform: springStyles.translatePctPx.interpolate((pct, px) => `translateX(calc(${px}px + ${pct}%))`)
         }}
       >
         {items.map((x, i) => (
@@ -106,12 +108,12 @@ const Sections = ({ items }) => {
       </animated.div>
       <animated.button
         className={`absolute top-0 left-0 h-12 w-24 fading-left-light`}
-        style={{ display: springStyles.leftButtonDisplay }}
+        style={{ display: md ? 'none' : springStyles.leftButtonDisplay }}
         onClick={() => {
           const i = Math.max(selectedIndex.current - 1, 0)
           selectedIndex.current = i
           setSpringStyles({
-            translatePctPx: [-100*i],
+            translatePctPx: [-100*i, 0],
             indexImmediate: i,
             leftButtonDisplay: i > 0 ? 'block' : 'none',
             rightButtonDisplay: i < items.length -1 ? 'block' : 'none',
@@ -122,12 +124,12 @@ const Sections = ({ items }) => {
       </animated.button>
       <animated.button
         className={`absolute top-0 right-0 h-12 w-24 fading-right-light`}
-        style={{ display: springStyles.rightButtonDisplay }}
+        style={{ display: md ? 'none' : springStyles.rightButtonDisplay }}
         onClick={() => {
           const i = Math.min(selectedIndex.current + 1, items.length - 1)
           selectedIndex.current = i
           setSpringStyles({
-            translatePctPx: [-100*i],
+            translatePctPx: [-100*i, 0],
             indexImmediate: i,
             leftButtonDisplay: i > 0 ? 'block' : 'none',
             rightButtonDisplay: i < items.length -1 ? 'block' : 'none',
