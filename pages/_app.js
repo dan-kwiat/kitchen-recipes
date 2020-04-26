@@ -1,5 +1,7 @@
-import {Fragment} from 'react'
-import {MDXProvider} from '@mdx-js/react'
+import { Fragment } from 'react'
+import { MDXProvider } from '@mdx-js/react'
+import { useDevice } from '../hooks'
+import { DeviceContext } from '../context'
 import Checkbox from '@material/react-checkbox'
 import Nav from '../components/nav'
 import 'react-horizontal/es/index.css'
@@ -24,10 +26,15 @@ const AppContainer = ({ children }) => {
   )
 }
 
-export default ({ Component, pageProps }) => (
-  <MDXProvider components={mdComponents}>
-    <AppContainer>
-      <Component {...pageProps} />
-    </AppContainer>
-  </MDXProvider>
-)
+export default ({ Component, pageProps }) => {
+  const device = useDevice()
+  return (
+    <MDXProvider components={mdComponents}>
+      <DeviceContext.Provider value={device}>
+        <AppContainer>
+          <Component {...pageProps} />
+        </AppContainer>
+      </DeviceContext.Provider>
+    </MDXProvider>
+  )
+}
