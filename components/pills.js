@@ -1,23 +1,5 @@
 import PropTypes from 'prop-types'
-
-const Pill = ({ primary, onClick, children }) => {
-  const dynamicClassNames = primary ? (
-    'border-teal-500 bg-teal-500 text-white'
-  ) : (
-    'border-white hover:border-gray-200 text-teal-500 hover:bg-gray-200'
-  )
-  return (
-    <span
-      className={`text-center block border rounded py-2 px-3 cursor-pointer ${dynamicClassNames}`}
-      onClick={onClick}
-      children={children}
-    />
-  )
-}
-Pill.propTypes = {
-  primary: PropTypes.bool,
-  onClick: PropTypes.func,
-}
+import Pill from './pill'
 
 const Pills = ({ items, selected, setSelected }) => {
   return (
