@@ -1,11 +1,5 @@
 {
   "name": "kitchen-recipes",
   "alias": "recipes.worthwhile.app",
-  "version": 2,
-  "builds": [
-    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "out" }  }
-  ],
-  "routes": [
-    { "src": "^/(.*)", "dest": "/$1.html" }
-  ]
+  "version": 2
 }

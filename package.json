@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "kitchen-recipes",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,8 +7,8 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "now-build": "next build && next export",
-    "deploy": "now --prod"
+    "deploy:preview": "now",
+    "deploy:production": "now --prod"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
@@ -17,7 +17,7 @@
     "@mdx-js/loader": "^1.5.7",
     "@next/mdx": "^9.3.1",
     "autoprefixer": "^9.7.4",
-    "next": "^9.3.1",
+    "next": "^9.3.5",
     "postcss-import": "^12.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
