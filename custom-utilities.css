@@ -5,6 +5,10 @@
   background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0) 100%);
 }
 
+.pan-y {
+  touch-action: pan-y;
+}
+
 .breathe-opacity {
   opacity: 1;
   animation-duration: 1.5s;

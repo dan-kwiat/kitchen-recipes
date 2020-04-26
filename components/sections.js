@@ -9,11 +9,11 @@ import Pill from './pill'
 const Pills = ({ labels, onSelect, selectedIndex, style, className }) => {
   console.log('rendering pills')
   return (
-    <div className={`md:flex whitespace-no-wrap justify-center p-1 left-50 ${className || ''}`} style={style}>
+    <div className={`md:flex whitespace-no-wrap justify-center p-1 ${className || ''}`} style={style}>
       {labels.map((x, i) => (
         <Pill
           key={x}
-          className='w-40 mr-2 inline-block md:block'
+          className='md:mr-2 w-40 box-border inline-block md:block'
           onClick={() => onSelect(i)}
           primary={i === selectedIndex}
         >
@@ -59,7 +59,6 @@ const Sections = ({ items }) => {
   }, [items.length])
 
 
-
   // Handle left/right dragging
   const bind = useDrag(({ tap, swipe, last, movement }) => {
     if (tap) return
@@ -74,7 +73,7 @@ const Sections = ({ items }) => {
 
 
   return (
-    <animated.div {...bind()} className='relative w-full overflow-hidden'>
+    <animated.div {...bind()} className='relative w-full overflow-hidden pan-y'>
       <animated.div
         style={{
           transform: md ? undefined : (
@@ -90,7 +89,7 @@ const Sections = ({ items }) => {
         />
       </animated.div>
       <animated.div
-        className='relative whitespace-no-wrap'
+        className='relative whitespace-no-wrap mt-4'
         style={{
           transform: springStyles.translatePctPx.interpolate((pct, px) => `translateX(calc(${px}px + ${pct}%))`)
         }}
