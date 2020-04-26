@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { animated, useSpring } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
@@ -30,40 +30,69 @@ const PILL_WIDTH = 160
 
 const Sections = ({ items }) => {
   console.log('rendering sections')
+  const selectedIndex = useRef(-1)
   const { md } = useContext(DeviceContext)
 
-  const [containerStyles, setContainerStyles] = useSpring(() => ({
-    index: 0,
+  const [springStyles, setSpringStyles] = useSpring(() => ({
+    translatePctPx: [0],
     indexImmediate: 0,
+    leftButtonDisplay: 'none',
+    rightButtonDisplay: 'block',
     immediate: key => key === 'indexImmediate'
   }))
 
+  // Handle left/right dragging
+  const bind = useDrag(({ swipe }) => {
+    if (!swipe[0]) {
+      return
+    }
+    const index = Math.min(
+      Math.max(
+        selectedIndex.current - swipe[0],
+        0
+      ),
+      items.length - 1
+    )
+
+    setSpringStyles({
+      translatePctPx: [-100*index],
+      indexImmediate: index,
+      leftButtonDisplay: index > 0 ? 'block' : 'none',
+      rightButtonDisplay: index < items.length -1 ? 'block' : 'none',
+    })
+
+    selectedIndex.current = index
+  }, { axis: 'x' })
+
 
   return (
-    <div className='relative w-full overflow-hidden'>
+    <animated.div {...bind()} className='relative w-full overflow-hidden'>
       <animated.div
         style={{
           transform: md ? undefined : (
-            containerStyles.index.interpolate(x => `translateX(${-PILL_WIDTH*(0.5 + x)}px)`)
+            springStyles.translatePctPx.interpolate((x) => `translateX(${PILL_WIDTH*(0.01*x - 0.5)}px)`)
           ),
         }}
       >
         <AnimatedPills
           labels={items.map(x => x.name)}
           onSelect={i => {
-            setContainerStyles({
-              index: i,
+            selectedIndex.current = i
+            setSpringStyles({
+              translatePctPx: [-100*i],
               indexImmediate: i,
+              leftButtonDisplay: i > 0 ? 'block' : 'none',
+              rightButtonDisplay: i < items.length -1 ? 'block' : 'none',
             })
           }}
           className='transform translate-x-1/2 md:translate-x-0'
-          selectedIndex={containerStyles.indexImmediate}
+          selectedIndex={springStyles.indexImmediate}
         />
       </animated.div>
       <animated.div
         className='relative whitespace-no-wrap'
         style={{
-          transform: containerStyles.index.interpolate(x => `translateX(${-100*x}%)`)
+          transform: springStyles.translatePctPx.interpolate((x) => `translateX(${x}%)`)
         }}
       >
         {items.map((x, i) => (
@@ -75,7 +104,39 @@ const Sections = ({ items }) => {
           </div>
         ))}
       </animated.div>
-    </div>
+      <animated.button
+        className={`absolute top-0 left-0 h-12 w-24 fading-left-light`}
+        style={{ display: springStyles.leftButtonDisplay }}
+        onClick={() => {
+          const i = Math.max(selectedIndex.current - 1, 0)
+          selectedIndex.current = i
+          setSpringStyles({
+            translatePctPx: [-100*i],
+            indexImmediate: i,
+            leftButtonDisplay: i > 0 ? 'block' : 'none',
+            rightButtonDisplay: i < items.length -1 ? 'block' : 'none',
+          })
+        }}
+      >
+        <svg className={`fill-current text-teal-500 hover:text-teal-700 breathe-opacity right`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+      </animated.button>
+      <animated.button
+        className={`absolute top-0 right-0 h-12 w-24 fading-right-light`}
+        style={{ display: springStyles.rightButtonDisplay }}
+        onClick={() => {
+          const i = Math.min(selectedIndex.current + 1, items.length - 1)
+          selectedIndex.current = i
+          setSpringStyles({
+            translatePctPx: [-100*i],
+            indexImmediate: i,
+            leftButtonDisplay: i > 0 ? 'block' : 'none',
+            rightButtonDisplay: i < items.length -1 ? 'block' : 'none',
+          })
+        }}
+      >
+        <svg className={`float-right fill-current text-teal-500 hover:text-teal-700 breathe-opacity left`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+      </animated.button>
+    </animated.div>
   )
 }
 Sections.propTypes = {
