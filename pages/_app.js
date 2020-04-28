@@ -4,9 +4,9 @@ import { useDevice } from '../hooks'
 import { DeviceContext } from '../context'
 import Checkbox from '@material/react-checkbox'
 import Nav from '../components/nav'
-import 'react-horizontal/es/index.css'
+// import 'react-horizontal/es/index.css'
 import '@material/react-checkbox/dist/checkbox.css'
-import '@material/react-menu-surface/dist/menu-surface.css'
+import '@rmwc/tooltip/tooltip.css'
 import '../index.css'
 
 const mdComponents = {
