@@ -2,19 +2,26 @@ import { Fragment } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import { useDevice } from '../hooks'
 import { DeviceContext } from '../context'
-import Checkbox from '@material/react-checkbox'
 import Nav from '../components/nav'
-// import 'react-horizontal/es/index.css'
-import '@material/react-checkbox/dist/checkbox.css'
 import '@rmwc/tooltip/tooltip.css'
 import '../index.css'
 
+let listItemId = 0
+
 const mdComponents = {
-  input: props => (
-    <div className='inline-block leading-10'>
-      <Checkbox />
-    </div>
-  )
+  li: props => {
+    console.log(props)
+    listItemId++
+    return (
+      <div class='flex items-start mt-4'>
+        <div class='flex items-center'>
+          &#8203;
+          <input id={listItemId} type='checkbox' class='form-checkbox border-gray-400 h-4 w-4 text-teal-500 cursor-pointer' />
+        </div>
+        <label for={listItemId} class='ml-3 text-gray-700 cursor-pointer'>{props.children}</label>
+      </div>
+    )
+  }
 }
 
 const AppContainer = ({ children }) => {

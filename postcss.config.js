@@ -4,13 +4,12 @@ const purgecss = [
     content: [
       "./components/**/*.js",
       "./pages/**/*.js",
-      "./node_modules/@material/react-checkbox/dist/**/*.js",
-      "./node_modules/@material/react-menu-surface/dist/**/*.js",
-      "./node_modules/react-horizontal/**/*.js",
     ],
+    whitelistPatterns: [/^rmwc-tooltip/],
     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
   }
-];
+]
+
 module.exports = {
   plugins: [
     "postcss-import",
@@ -18,4 +17,4 @@ module.exports = {
     "autoprefixer",
     ...(process.env.NODE_ENV === "production" ? [purgecss] : [])
   ]
-};
+}
