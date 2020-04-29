@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 
 const Pill = ({ primary, onClick, children, className }) => {
-  const dynamicClassNames = primary ? (
-    'border-teal-500 bg-teal-500 text-white'
+  const dynamicClassName = primary ? (
+    'md:bg-gray-700 md:text-white'
   ) : (
-    'border-white hover:border-gray-200 text-teal-500 hover:bg-gray-200'
+    'md:hover:bg-gray-300 text-gray-400 md:text-gray-600'
   )
   return (
     <button
-      className={`text-center block border rounded py-2 px-3 cursor-pointer ${dynamicClassNames} ${className || ''}`}
+      className={`text-xl font-semibold uppercase tracking-wider focus:outline-none no-tap-highlight py-2 px-3 rounded transition-colors duration-300 ${dynamicClassName} ${className || ''}`}
       onClick={onClick}
       children={children}
     />
