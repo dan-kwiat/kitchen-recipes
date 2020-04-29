@@ -1,5 +1,5 @@
 body {
-  @apply font-sans tracking-wide bg-white m-0;
+  @apply font-sans tracking-wide bg-white text-gray-800 m-0;
 }
 
 h1 {
@@ -11,15 +11,15 @@ h2 {
 }
 
 h3 {
-  @apply text-3xl leading-normal;
+  @apply text-3xl leading-normal my-4;
 }
 
 h4 {
-  @apply text-gray-600;
+  @apply text-2xl text-gray-600 my-4;
 }
 
 a {
-  @apply text-teal-500;
+  @apply text-teal-500 break-words;
 }
 a:hover {
   @apply text-teal-400;
