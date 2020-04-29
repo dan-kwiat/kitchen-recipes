@@ -6,20 +6,26 @@ import Nav from '../components/nav'
 import '@rmwc/tooltip/tooltip.css'
 import '../index.css'
 
+const LabelledCheckbox = ({ label }) => {
+  return (
+    <label className='flex items-start cursor-pointer no-tap-highlight'>
+      <input
+        type='checkbox'
+        className='form-checkbox bg-white text-teal-500 border-gray-400 focus:border-teal-500 cursor-pointer transition-color duration-300'
+        style={{ marginTop: 4 }}
+      />
+      <span className='task-text ml-2 text-gray-700'>
+        {label}
+      </span>
+    </label>
+  )
+}
+
 const mdComponents = {
   li: props => {
     return (
       <li className='mb-4'>
-        <label className='flex items-start cursor-pointer no-tap-highlight'>
-          <input
-            type='checkbox'
-            className='form-checkbox bg-white text-teal-500 border-gray-400 focus:border-teal-500 cursor-pointer'
-            style={{ marginTop: 4 }}
-          />
-          <span className='task-text ml-2 text-gray-700'>
-            {props.children}
-          </span>
-        </label>
+        <LabelledCheckbox label={props.children} />
       </li>
     )
   }
