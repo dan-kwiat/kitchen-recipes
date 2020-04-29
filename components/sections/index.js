@@ -121,22 +121,24 @@ const Sections = ({ items }) => {
         ))}
       </animated.div>
       <animated.button
-        className={`absolute top-0 left-0 h-12 w-8 fading-left-light`}
+        className={`absolute top-0 left-0 h-12 w-12 md:w-24 focus:outline-none fading-left-light`}
         style={{ display: springStyles.leftButtonDisplay }}
         onClick={() => {
           spring({ index: selectedIndex.current - 1 })
         }}
       >
         <svg className={`md:hidden fill-current text-teal-500 hover:text-teal-700 breathe-opacity right`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+        <svg className={`hidden md:block fill-current text-teal-500`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48px" height="48px"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
       </animated.button>
       <animated.button
-        className={`absolute top-0 right-0 h-12 w-8 fading-right-light`}
+        className={`absolute top-0 right-0 h-12 w-12 md:w-24 focus:outline-none fading-right-light`}
         style={{ display: springStyles.rightButtonDisplay }}
         onClick={() => {
           spring({ index: selectedIndex.current + 1 })
         }}
       >
         <svg className={`md:hidden float-right fill-current text-teal-500 hover:text-teal-700 breathe-opacity left`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+        <svg className={`hidden md:block float-right fill-current text-teal-500`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48px" height="48px"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
       </animated.button>
     </animated.div>
   )
