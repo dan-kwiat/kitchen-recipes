@@ -1,11 +1,6 @@
 import Badges from '../components/badges'
 import Sections from '../components/sections'
-import { Ingredients, Method } from '../recipes/chana-masala'
-
-const SECTIONS = [
-  { name: 'Ingredients', component: <Ingredients/> },
-  { name: 'Method', component: <Method/> },
-]
+import sectionItems from '../recipes/chana-masala'
 
 export default () => {
   return (
@@ -19,7 +14,7 @@ export default () => {
       </div>
       <hr />
       <Sections
-        items={SECTIONS}
+        items={sectionItems}
       />
     </div>
   )
