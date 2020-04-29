@@ -2,7 +2,7 @@ import { useCallback, useContext, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { animated, useSpring } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
-import { DeviceContext } from '../context'
+import { DeviceContext } from '../../context'
 import Pill from './pill'
 
 const PILL_WIDTH = 190
@@ -36,7 +36,6 @@ Pills.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
 }
-
 
 const AnimatedPills = animated(Pills)
 
