@@ -146,7 +146,7 @@ const Sections = ({ items }) => {
 Sections.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    component: PropTypes.elementType.isRequired,
+    component: PropTypes.element.isRequired,
   })).isRequired,
 }
 
