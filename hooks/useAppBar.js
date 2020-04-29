@@ -18,7 +18,7 @@ const useAppBar = (getHeight, maxWidth, parallax) => {
         if (scroll < 0) {
           return 0
         }
-        const diff = (scroll - prevScroll.current)*(parallax || 1.5)
+        const diff = (scroll - prevScroll.current)*(parallax || 1)
         const offset = diff > 0 ? (
           Math.max(prevOffset - diff, -getHeight(window.innerWidth))
         ) : (

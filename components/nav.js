@@ -4,7 +4,7 @@ import { useAppBar } from '../hooks'
 const Nav = () => {
   const offset = useAppBar(() => 64)
   return (
-    <nav className='fixed left-0 right-0 bg-white shadow-lg' style={{ top: offset }}>
+    <nav className='fixed top-0 left-0 right-0 bg-white shadow-lg' style={{ transform: `translateY(${offset}px)` }}>
       <ul className='flex justify-between items-center p-4 md:px-8 lg:px-24'>
         <li className='p-1'>
           <Link href='/'>
