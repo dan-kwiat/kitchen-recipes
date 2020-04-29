@@ -4995,14 +4995,6 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-horizontal@^1.0.0-alpha.20:
-  version "1.0.0-alpha.20"
-  resolved "https://registry.yarnpkg.com/react-horizontal/-/react-horizontal-1.0.0-alpha.20.tgz#b15c05f9047c4679718ce83d93626ecbbc8d3851"
-  integrity sha512-wCXxgffWSlxhsDoF7IXQPkFu4dpDFLZFRQDMHPskRCFudqA1DUTVn6+bBiAwObzqs3nNKgZADNjjXJzyZ8xYJA==
-  dependencies:
-    react-spring "^8.0.27"
-    react-use-gesture "^7.0.5"
-
 react-is@16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
@@ -5030,11 +5022,6 @@ react-use-gesture@^7.0.15:
   version "7.0.15"
   resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-7.0.15.tgz#93c651e916a31cfb12d079e7fa1543d5b0511e07"
   integrity sha512-vHQkaa7oUbSDTAcFk9huQXa7E8KPrZH91erPuOMoqZT513qvtbb/SzTQ33lHc71/kOoJkMbzOkc4uoA4sT7Ogg==
-
-react-use-gesture@^7.0.5:
-  version "7.0.5"
-  resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-7.0.5.tgz#e260ecf03a4e537cc7d9624bc2cff54e943f505a"
-  integrity sha512-8/CYG76/fLypdlPgRqxTQ2l987uc0XBQL8ax0cnA/tbeM5jU4KoQH+FG3ya6v4pMqPN1KpJQyc1QYEbKgA0QMQ==
 
 react@^16.13.1:
   version "16.13.1"
