@@ -1,39 +1,39 @@
-import { Fragment } from 'react'
-import { MDXProvider } from '@mdx-js/react'
-import { useDevice } from '../hooks'
-import { DeviceContext } from '../context'
-import Nav from '../components/nav'
-import '@rmwc/tooltip/tooltip.css'
-import '../index.css'
+import { MDXProvider } from "@mdx-js/react"
+
+import { useDevice } from "../hooks"
+import { DeviceContext } from "../context"
+import Nav from "../components/nav"
+import "@rmwc/tooltip/tooltip.css"
+import "../index.css"
+import "../custom-base.css"
+import "../custom-utilities.css"
 
 const LabelledCheckbox = ({ label }) => {
   return (
-    <label className='flex items-start cursor-pointer no-tap-highlight'>
+    <label className="flex items-start cursor-pointer no-tap-highlight">
       <input
-        type='checkbox'
-        className='form-checkbox bg-white text-teal-500 border-gray-400 focus:border-teal-500 cursor-pointer transition-color duration-300'
+        type="checkbox"
+        className="form-checkbox bg-white text-teal-500 border-gray-400 focus:border-teal-500 cursor-pointer transition-color duration-300"
         style={{ marginTop: 4 }}
       />
-      <span className='task-text ml-2 text-gray-700'>
-        {label}
-      </span>
+      <span className="task-text ml-2 text-gray-700">{label}</span>
     </label>
   )
 }
 
 const mdComponents = {
-  li: props => {
+  li: (props) => {
     return (
-      <li className='mb-4'>
+      <li className="mb-4">
         <LabelledCheckbox label={props.children} />
       </li>
     )
-  }
+  },
 }
 
 const AppContainer = ({ children }) => {
   return (
-    <div className='relative max-w-screen-md min-h-screen box-border pb-4 pt-24 my-0 mx-auto'>
+    <div className="relative max-w-screen-md min-h-screen box-border pb-4 pt-24 my-0 mx-auto">
       {children}
       <Nav />
     </div>
