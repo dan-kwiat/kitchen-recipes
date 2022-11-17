@@ -38,7 +38,7 @@ for 4 minutes.
 
 Scoop out the tea then stir in the sugar until dissolved.
 
-Cover the jug and leave to cool completely e.g. overnight
+Cover the jug and leave to cool completely e.g. overnight.
 
 <!-- Note: if your jug is lidless, you'll lose 100-200ml water to evaporation just in
 the 4 minutes brewing time. Put the jug on electric scales if you don't believe
@@ -62,7 +62,7 @@ cooling.
 _Tip: start brewing tea for the next batch before bottling this batch._
 
 Once the tea has fermented long enough, slowly pour the liquid through a clean
-seive into a large jug, keeping the scobies in the jar.
+sieve into a large jug, keeping the scobies in the jar.
 
 Find some clean bottles with completely airtight lids i.e. flip top bottles. Add
 flavourings to each bottle e.g. root ginger, lemon/orange juice, handful of
