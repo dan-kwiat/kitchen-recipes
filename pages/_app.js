@@ -33,9 +33,9 @@ const mdComponents = {
 
 const AppContainer = ({ children }) => {
   return (
-    <div className="relative max-w-screen-md min-h-screen box-border pb-4 pt-24 my-0 mx-auto">
+    <div className="relative max-w-screen-md min-h-screen box-border pb-4 pt-12 my-0 mx-auto">
       {children}
-      <Nav />
+      {/* <Nav /> */}
     </div>
   )
 }
