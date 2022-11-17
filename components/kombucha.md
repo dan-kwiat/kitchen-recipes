@@ -11,7 +11,7 @@ Makes two 750ml bottles
 - 1.7L boiling water
 <!-- (pre-boil volume - some is lost to evaporation) -->
 - 4 bags black tea
-- 100g demarrera sugar
+- 100g demerara sugar
 - A scoby in 1 cup liquid from the previous batch
 <!-- 
 [15 Sep]
@@ -20,7 +20,7 @@ Makes two 750ml bottles
 - 1670g boiling water (pre-boil volume - some is lost to evaporation)
 - 2 bags black tea + some loose hibiscus
 - A scoby in 1 cup liquid from previous batch
-- 100g demarrera sugar
+- 100g demerara sugar
 
 [8 Sep]
 
