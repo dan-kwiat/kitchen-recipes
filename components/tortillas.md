@@ -22,11 +22,13 @@ ball.
 
 Cover with a tea towel and leave for 15 minutes.
 
-## 2. Divide into pieces
+## 2. Divide the dough
 
 Place the dough ball on the counter top and press down with your hands to make
 it into a circle shape. This makes it easy to slice into even pieces. Ideally
 you should go for a power of 2 i.e. 8 or 16 pieces.
+
+Roll each slice between your palms into a ball.
 
 ## 3. Press and fry
 

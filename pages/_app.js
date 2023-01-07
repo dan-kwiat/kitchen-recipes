@@ -9,10 +9,10 @@ import "../custom-utilities.css"
 
 const LabelledCheckbox = ({ label }) => {
   return (
-    <label className="flex items-center cursor-pointer no-tap-highlight">
+    <label className="flex items-start cursor-pointer no-tap-highlight">
       <input
         type="checkbox"
-        className="form-checkbox bg-white text-gray-900 border-gray-400 focus:border-gray-900 cursor-pointer"
+        className="form-checkbox mt-1.5 bg-white text-gray-900 border-gray-400 focus:border-gray-900 cursor-pointer"
       />
       <span className="task-text ml-2 text-gray-700">{label}</span>
     </label>
@@ -22,10 +22,13 @@ const LabelledCheckbox = ({ label }) => {
 const mdComponents = {
   li: (props) => {
     return (
-      <li className="list-none">
+      <li className="pl-0">
         <LabelledCheckbox label={props.children} />
       </li>
     )
+  },
+  ul: (props) => {
+    return <ul className="list-none pl-0">{props.children}</ul>
   },
 }
 
