@@ -8,7 +8,7 @@ Makes two 750ml bottles
 
 <!-- [22 Sep] -->
 
-- 1.7L boiling water
+- 1.7L boiling water (a full kettle)
 <!-- (pre-boil volume - some is lost to evaporation) -->
 - 4 bags black tea
 - 100g demerara sugar
