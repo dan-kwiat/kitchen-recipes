@@ -74,8 +74,10 @@ into the scoby jar.
 Peel apart the scobies and compost the old one, or give it to someone. If the
 tea for the next batch has cooled down, pour it into the scoby jar.
 
-Seal the bottles and leave at room temperature for 3 days to carbonate
-naturally.
+## Carbonate
+
+After filling the bottles, seal the airtight lids and leave at room temperature
+for 3 days to carbonate naturally.
 
 Keeping the bottles sealed, put them in the fridge. Once cold, let the pressure
 out of each bottle gently and drink :) Pour the kombucha through a tea strainer
