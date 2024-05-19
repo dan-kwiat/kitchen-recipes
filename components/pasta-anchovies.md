@@ -1,5 +1,7 @@
 # Pasta with Anchovies
 
+4 servings
+
 ---
 
 ## Ingredients
