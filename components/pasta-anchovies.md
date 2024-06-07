@@ -18,7 +18,7 @@
 
 **For the pasta**
 
-- 360g pasta
+- 360g spaghetti
 - 60g bread
 - parsley
 - extra virgin olive oil
@@ -26,7 +26,7 @@
 
 ---
 
-## 1. Prepare pasta
+## 1. Prepare spaghetti
 
 As usual in salted water
 
